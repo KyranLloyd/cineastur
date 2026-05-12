@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineAstur - Tu cine favorito</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <span class="logo-text">CineAstur</span>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#peliculas">Cartelera</a></li>
+                <li><a href="#calculadora">Entradas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <h1>Bienvenido a <span class="destacado">CineAstur</span></h1>
+        <p>Las mejores películas, la mejor experiencia</p>
+    </section>
+
+    <section id="peliculas" class="seccion">
+        <h2>Cartelera</h2>
+        <p class="subtitulo">Películas en cartelera esta semana</p>
+
+        <div class="grid-peliculas">
+
+            <div class="tarjeta-pelicula">
+                <div class="poster">
+                    <img src="michael.jpg" alt="Michael">
+                </div>
+                <div class="info-pelicula">
+                    <h3>Michael</h3>
+                    <p class="genero">Biografía</p>
+                    <p class="duracion">2h 7min</p>
+                    <p class="clasificacion">Todos los públicos</p>
+                </div>
+            </div>
+
+            <div class="tarjeta-pelicula">
+                <div class="poster">
+                    <img src="mortal_kombat_two.jpg" alt="mortalcombat">
+                </div>
+                <div class="info-pelicula">
+                    <h3>Mortal Combat II</h3>
+                    <p class="genero">Acción</p>
+                    <p class="duracion">1h 56min</p>
+                    <p class="clasificacion">+16 años</p>
+                </div>
+            </div>
+
+            <div class="tarjeta-pelicula">
+                <div class="poster">
+                    <img src="drama.jpg" alt="drama">
+                </div>
+                <div class="info-pelicula">
+                    <h3>El Drama</h3>
+                    <p class="genero">Drama / Comedia</p>
+                    <p class="duracion">1h 46min</p>
+                    <p class="clasificacion">+16 años</p>
+                </div>
+            </div>
+
+            <div class="tarjeta-pelicula">
+                <div class="poster">
+                    <img src="jugadamaestra.jpg" alt="jugadamaestra">
+                </div>
+                <div class="info-pelicula">
+                    <h3>Jugada Maestra</h3>
+                    <p class="genero">Comedia / Drama</p>
+                    <p class="duracion">1h 45min</p>
+                    <p class="clasificacion">+16 años</p>
+                </div>
+            </div>
+
+            <div class="tarjeta-pelicula">
+                <div class="poster">
+                    <img src="diabloprada.jpg" alt="diablo">
+                </div>
+                <div class="info-pelicula">
+                    <h3>El Diablo Viste de Prada 2</h3>
+                    <p class="genero">Comedia</p>
+                    <p class="duracion">2h 56min</p>
+                    <p class="clasificacion">+7 años</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="calculadora" class="seccion seccion-oscura">
+        <h2>Compra tus Entradas</h2>
+        <p class="subtitulo">Calcula el precio de tus entradas</p>
+
+        <form id="formulario-entradas">
+            <div class="campo">
+                <label for="pelicula">Película:</label>
+                <select id="pelicula">
+                    <option value="">-- Selecciona una película --</option>
+                    <option>Michael</option>
+                    <option>Mortal Combat II</option>
+                    <option>El Drama</option>
+                    <option>Jugada Maestra</option>
+                    <option>El Diablo Viste de Prada 2</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label for="tipo">Tipo de entrada:</label>
+                <select id="tipo">
+                    <option value="">-- Selecciona el tipo --</option>
+                    <option value="8.50">Normal - 8.50€</option>
+                    <option value="6.00">Estudiante - 6.00€</option>
+                    <option value="12.00">Normal con palomitas y bebida - 12.00€</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label for="cantidad">Número de entradas:</label>
+                <input type="number" id="cantidad" min="1" max="20" placeholder="Escribe la cantidad">
+            </div>
+            <button type="submit">Calcular precio</button>
+        </form>
+
+        <div id="resultado" class="resultado oculto">
+            <h3>Resumen de tu compra</h3>
+            <p id="texto-pelicula"></p>
+            <p id="texto-tipo"></p>
+            <p id="texto-cantidad"></p>
+            <hr>
+            <p id="texto-subtotal"></p>
+            <p id="texto-iva"></p>
+            <p id="texto-total" class="precio-total"></p>
+        </div>
+    </section>
+
+    <section id="contacto" class="seccion">
+        <h2>Contacto</h2>
+        <p class="subtitulo">¿Tienes alguna duda? Escríbenos</p>
+
+        <form class="formulario-contacto">
+            <div class="campo">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Tu nombre">
+            </div>
+            <div class="campo">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="tu@email.com">
+            </div>
+            <div class="campo">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+            </div>
+            <button type="submit">Enviar mensaje</button>
+        </form>
+
+        <div class="info-contacto">
+            <p>Calle Mayor, 15 - Avilés, Asturias</p>
+            <p>985 123 456</p>
+            <p>info@cineastur.es</p>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
